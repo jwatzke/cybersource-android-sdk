@@ -121,3 +121,7 @@ public void onErrorReceived(SDKError error)
 ##Sample Application
 We have a sample application which demonstrates the SDK usage:  
    https://github.com/CyberSource/cybersource-android-samples
+  
+  
+##Google Play In-App Billing API
+Google’s developer terms require that purchases related to the app, such as premium features or credits, are made via their native Google Play In-app Billing API.  See https://play.google.com/about/developer-content-policy.html for more details.
