@@ -44,3 +44,7 @@
     java.lang.Object writeReplace();
     java.lang.Object readResolve();
 }
+
+-dontnote org.apache.**
+-dontwarn org.junit.**
+-dontwarn org.hamcrest.**

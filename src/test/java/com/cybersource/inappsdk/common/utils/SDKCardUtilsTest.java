@@ -1,4 +1,4 @@
-package com.visa.inappsdk.common.utils;
+package com.cybersource.inappsdk.common.utils;
 
 import com.cybersource.inappsdk.common.SDKCardBrandType;
 import com.cybersource.inappsdk.common.exceptions.SDKInvalidCardException;

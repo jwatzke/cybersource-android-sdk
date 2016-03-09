@@ -9,7 +9,7 @@
         android:allowBackup="true"
         android:label="@string/app_name" >
         <service
-            android:name=".connectors.inapp.InAppConnectionService"
+            android:name="com.cybersource.inappsdk.connectors.inapp.InAppConnectionService"
             android:exported="false" >
         </service>
     </application>

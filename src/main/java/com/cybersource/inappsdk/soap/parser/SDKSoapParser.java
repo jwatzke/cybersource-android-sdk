@@ -70,7 +70,7 @@ public class SDKSoapParser {
 		sb.append(XML_START_TAG);
 		parseChildNodes(sb, envelope.getEnvelopeNode());
 
-        Log.d("SOAP Request", sb.toString());
+        //Log.d("SOAP Request", sb.toString());
 		return sb.toString();
 	}
 

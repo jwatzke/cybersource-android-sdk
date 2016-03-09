@@ -1,4 +1,4 @@
-package com.visa.inappsdk.connectors.inapp;
+package com.cybersource.inappsdk.connectors.inapp;
 
 import org.junit.After;
 import org.junit.Before;

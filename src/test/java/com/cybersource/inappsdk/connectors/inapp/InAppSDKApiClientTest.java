@@ -1,4 +1,4 @@
-package com.visa.inappsdk.connectors.inapp;
+package com.cybersource.inappsdk.connectors.inapp;
 
 import android.content.Context;
 import android.test.mock.MockContext;

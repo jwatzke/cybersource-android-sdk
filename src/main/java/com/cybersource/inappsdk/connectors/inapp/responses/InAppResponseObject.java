@@ -177,7 +177,7 @@ public final class InAppResponseObject extends InAppResponseFields {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		Log.d("SOAP Response", writer.toString());
+		//Log.d("SOAP Response", writer.toString());
 	}
 
 

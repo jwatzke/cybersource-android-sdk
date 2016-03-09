@@ -16,6 +16,7 @@ ext {
     gitUrl = 'https://github.com/AuthorizeNet/cybersource-android-sdk.git'
 
     libraryVersion = '2.0.0'
+    localReleaseDest = "${buildDir}/release/${libraryVersion}"
 
     developerId = 'fezzubair'
     developerName = 'Faizan Zubair'
@@ -24,6 +25,16 @@ ext {
     licenseName = 'The MIT License (MIT)'
     licenseUrl = 'https://opensource.org/licenses/MIT'
     allLicenses = ["MIT"]
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        pom.groupId = publishedGroupId
+        pom.artifactId = artifact
+        pom.version = libraryVersion
+        // Add other pom properties here if you want (developer details / licenses)
+        repository(url: "file://${localReleaseDest}")
+    }
 }
 
 android {
@@ -111,6 +122,21 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     classifier = 'javadoc'
     from javadoc.destinationDir
 }
+
+task zipRelease(type: Zip) {
+    from localReleaseDest
+    destinationDir buildDir
+    archiveName "release-${version}.zip"
+}
+
+task generateRelease << {
+    println "Release ${version} can be found at ${localReleaseDest}/"
+    println "Release ${version} zipped can be found ${buildDir}/release-${version}.zip"
+}
+
+generateRelease.dependsOn(uploadArchives)
+generateRelease.dependsOn(zipRelease)
+
 artifacts {
     archives javadocJar
     archives sourcesJar
@@ -151,3 +177,21 @@ dependencies {
     compile 'commons-codec:commons-codec:1.10'
     compile 'junit:junit:4.12'
 }
+task createPom {
+    pom {
+        project {
+            groupId 'com.cybersource'
+            artifactId 'cybersource-inapp-android'
+            version '1.0.0'
+
+            licenses {
+                license {
+                    name 'The MIT License (MIT)'
+                    url 'https://opensource.org/licenses/MIT'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("pom.xml")
+}
+

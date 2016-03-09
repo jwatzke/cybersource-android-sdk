@@ -1,4 +1,4 @@
-package com.visa.inappsdk;
+package com.cybersource.inappsdk;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

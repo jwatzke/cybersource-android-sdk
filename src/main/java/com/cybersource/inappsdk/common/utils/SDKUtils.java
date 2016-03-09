@@ -247,6 +247,7 @@ public class SDKUtils {
 		urlConnection.setDoOutput(doOutput);
 		urlConnection.setDoInput(true);
 		android.util.Log.d("SDKUtils", "Connection: " + requestMethod + " -to- " + urlString);
+
 		return urlConnection;
 	}
 
