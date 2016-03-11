@@ -29,9 +29,9 @@ public class InAppEncryptedPayment implements InAppBaseModel {
     public void updateEnvelope(SDKXMLParentNode request) {
         if (validateObject()) {
             SDKXMLParentNode purchase = request.addNode(request.getNamespace(), OBJECT_NAME);
-            if (this.descriptor != null) {
-                purchase.addTextNode(purchase.getNamespace(), DESCRIPTOR, this.descriptor);
-            }
+           // if (this.descriptor != null) {
+           //     purchase.addTextNode(purchase.getNamespace(), DESCRIPTOR, this.descriptor);
+           // }
             if (this.data != null) {
                 purchase.addTextNode(null, DATA, this.data);
             }
