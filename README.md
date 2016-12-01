@@ -1,5 +1,9 @@
 # CyberSource Android SDK
 
+This SDK provides simple functionality to dispatch sensitive credit card data directly to CyberSource, returning a safe payment token that can be passed up to your mobile backend for standard CyberSource processing without the burden of credit card data ever hitting your server.  With this secure payment token your server can create a CyberSource subscription, long term token or payment.
+
+**_NOTE: this SDK is not intended for AndroidPay transactions but rather is complimentary to the Google AndroidPay SDK.  The payment data blobs from this SDK and the Google AndroidPay SDK can be treated just the same for CyberSource payment processing._**
+
 ## SDK Installation
 
 Android Studio is preferred because Eclipse will not be supported by Google much longer.
